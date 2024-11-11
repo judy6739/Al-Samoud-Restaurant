@@ -1,0 +1,398 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Body */
+body {
+    background: linear-gradient(135deg, #3498db, #9b59b6);
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Header */
+.header {
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    text-align: center;
+    padding: 80px 0;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease-in-out;
+}
+
+.header:hover {
+    background: rgba(0, 0, 0, 0.85);
+}
+
+.header .logo img {
+    width: 180px;
+    height: auto;
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+}
+
+.header .logo img:hover {
+    transform: rotate(10deg) scale(1.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.navbar ul li {
+    display: inline-block;
+    margin: 0 30px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 15px 35px;
+    border-radius: 50px;
+    background: #e74c3c;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar ul li a:hover {
+    background: #f39c12;
+    color: #fff;
+    transform: translateY(-5px);
+}
+
+/* Menu Section */
+.menu-section {
+    padding: 100px 20px;
+    background: linear-gradient(45deg, #1abc9c, #f39c12);
+    text-align: center;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.menu-section h2 {
+    font-size: 48px;
+    color: #fff;
+    margin-bottom: 50px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* تعديل فئة .menu-category */
+.menu-category {
+    margin-bottom: 50px;
+}
+
+.menu-category h3 {
+    font-size: 30px;
+    color: #e74c3c;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* تنسيق الأطباق داخل .menu-item */
+.menu-item {
+    display: inline-block;
+    width: 280px;
+    margin: 20px;
+    padding: 25px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+    text-align: center;
+}
+
+.menu-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    background-color: #ecf0f1;
+}
+
+.menu-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.menu-item img:hover {
+    transform: scale(1.1);
+}
+
+.menu-item h4 {
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
+    margin-top: 15px;
+    text-transform: capitalize;
+}
+
+.menu-item p {
+    font-size: 18px;
+    color: #7f8c8d;
+    margin-top: 10px;
+}
+
+.menu-item .price {
+    font-size: 24px;
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+/* Contact Section */
+.contact-section {
+    background-color: #34495e;
+    color: #fff;
+    padding: 80px 20px;
+    text-align: center;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+    border-top: 5px solid #e74c3c;
+}
+
+.contact-section h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.contact-section p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.contact-section strong {
+    font-size: 24px;
+    color: #f39c12;
+}
+
+.contact-section .contact-info {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #bdc3c7;
+}
+
+.contact-section .social-links a {
+    font-size: 30px;
+    color: #fff;
+    margin: 0 20px;
+    transition: color 0.3s ease;
+}
+
+.contact-section .social-links a:hover {
+    color: #f39c12;
+}
+
+/* Animation Effects */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .menu-item {
+        width: 100%;
+        margin: 15px 0;
+    }
+
+    .header .logo img {
+        width: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-item {
+        width: 100%;
+        margin: 15px 0;
+        padding: 20px;
+    }
+
+    .header .logo img {
+        width: 120px;
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
+    }
+}
+
+/* تأثير العناصر عند التمرير - Fade in effect */
+.menu-item {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.menu-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* تأثير التفاعل مع مرور الماوس (التكبير) */
+.menu-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* تأثير التفاعل مع الصور داخل عناصر القائمة */
+.menu-item img {
+    transition: transform 0.3s ease;
+}
+
+.menu-item img:hover {
+    transform: scale(1.1);
+}
+
+/* تأثير التفاعل مع أزرار التنقل */
+.navbar ul li a {
+    transition: background-color 0.3s ease;
+}
+
+/* تأثير التفاعل مع قسم الاتصال */
+.contact-section {
+    transition: background-color 0.3s ease;
+}
+/* Language Switcher */
+.language-switcher {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+}
+
+.language-switcher select {
+    font-size: 18px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.language-switcher select:hover {
+    background-color: #f39c12;
+    color: white;
+}
+
+/* تنسيق قسم إدارة حمزة أبو أحمد */
+.admin-info {
+    background-color: #e74c3c;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* تنسيق قسم الاتصال */
+.contact-section {
+    background-color: #34495e;
+    color: #fff;
+    padding: 80px 20px;
+    text-align: center;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+    border-top: 5px solid #e74c3c;
+}
+
+/* تنسيق العنوان في قسم الاتصال */
+.contact-section h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* تنسيق النصوص داخل قسم الاتصال */
+.contact-section p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+/* تنسيق الأرقام */
+.contact-section strong {
+    font-size: 24px;
+    color: #f39c12;
+}
+
+/* تنسيق الشعار ليكون دائري الشكل */
+.logo-image {
+    width: 150px;  /* عرض الشعار */
+    height: 150px; /* ارتفاع الشعار */
+    border-radius: 50%; /* جعل الشعار دائري */
+    object-fit: cover; /* لتنسيق الصورة داخل الدائرة */
+    border: 5px solid #fff; /* إضافة حدود بيضاء حول الشعار */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* إضافة تأثير الظل */
+    transition: transform 0.3s ease; /* تأثير عند التمرير */
+}
+
+/* تأثير التكبير عند التمرير فوق الشعار */
+.logo-image:hover {
+    transform: scale(1.1); /* تكبير الشعار */
+}
+
+/* تنسيق قسم موقع المطعم */
+.location-section {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-top: 2px solid #ddd;
+    margin-top: 20px;
+}
+
+.location-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.location-section p {
+    font-size: 18px;
+    color: #555;
+}
+
+.location-section a {
+    color: #007bff; /* لون الرابط */
+    text-decoration: none;
+}
+
+.location-section a:hover {
+    text-decoration: underline;
+}
